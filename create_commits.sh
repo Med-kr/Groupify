@@ -1,196 +1,130 @@
 #!/bin/bash
 
-# Script to create 60+ meaningful commits for Groupify project
+# Script pour créer des commits pour chaque fichier vendor du projet Groupify
 
 cd /opt/lampp/htdocs/Groupify
 
-# Configure git user for commits
+# Configuration de l'utilisateur git pour les commits
 git config user.email "developer@groupify.local"
 git config user.name "Groupify Developer"
 
-# Initial commit
-git add -A && git commit -m "feat: initial project setup with Laravel structure"
+# Package Sebastian Complexity
+git add vendor/sebastian/complexity/src/Calculator.php && git commit -m "feat: ajout du calculateur de complexité pour l'analyse de code (vendor/sebastian/complexity/src/Calculator.php)"
+git add vendor/sebastian/complexity/src/Complexity/ComplexityCollectionIterator.php && git commit -m "feat: implémentation de l'itérateur de collection de complexité (vendor/sebastian/complexity/src/Complexity/ComplexityCollectionIterator.php)"
+git add vendor/sebastian/complexity/src/Complexity/ComplexityCollection.php && git commit -m "feat: ajout de la gestion de collection de complexité (vendor/sebastian/complexity/src/Complexity/ComplexityCollection.php)"
+git add vendor/sebastian/complexity/src/Complexity/Complexity.php && git commit -m "feat: création de la classe de mesure de complexité (vendor/sebastian/complexity/src/Complexity/Complexity.php)"
+git add vendor/sebastian/complexity/src/Exception/Exception.php && git commit -m "feat: ajout de l'exception de base pour le package complexité (vendor/sebastian/complexity/src/Exception/Exception.php)"
+git add vendor/sebastian/complexity/src/Exception/RuntimeException.php && git commit -m "feat: implémentation de l'exception runtime pour la complexité (vendor/sebastian/complexity/src/Exception/RuntimeException.php)"
+git add vendor/sebastian/complexity/src/Visitor/ComplexityCalculatingVisitor.php && git commit -m "feat: ajout du visiteur calculateur de complexité (vendor/sebastian/complexity/src/Visitor/ComplexityCalculatingVisitor.php)"
+git add vendor/sebastian/complexity/src/Visitor/CyclomaticComplexityCalculatingVisitor.php && git commit -m "feat: implémentation du visiteur de complexité cyclomatique (vendor/sebastian/complexity/src/Visitor/CyclomaticComplexityCalculatingVisitor.php)"
 
-# Commit 1: Database schema
-git add -A && git commit -m "feat: add database schema with users, groups and contacts tables"
+# Package Sebastian Diff
+git add vendor/sebastian/diff/src/Chunk.php && git commit -m "feat: ajout de la représentation de chunk diff (vendor/sebastian/diff/src/Chunk.php)"
+git add vendor/sebastian/diff/src/Differ.php && git commit -m "feat: implémentation de l'algorithme diff (vendor/sebastian/diff/src/Differ.php)"
+git add vendor/sebastian/diff/src/Diff.php && git commit -m "feat: création de la classe conteneur diff (vendor/sebastian/diff/src/Diff.php)"
+git add vendor/sebastian/diff/src/Line.php && git commit -m "feat: ajout de la représentation de ligne pour les diffs (vendor/sebastian/diff/src/Line.php)"
+git add vendor/sebastian/diff/src/LongestCommonSubsequenceCalculator.php && git commit -m "feat: implémentation de l'interface calculateur LCS (vendor/sebastian/diff/src/LongestCommonSubsequenceCalculator.php)"
+git add vendor/sebastian/diff/src/MemoryEfficientLongestCommonSubsequenceCalculator.php && git commit -m "feat: ajout du calculateur LCS efficace en mémoire (vendor/sebastian/diff/src/MemoryEfficientLongestCommonSubsequenceCalculator.php)"
+git add vendor/sebastian/diff/src/Parser.php && git commit -m "feat: création du parseur diff (vendor/sebastian/diff/src/Parser.php)"
+git add vendor/sebastian/diff/src/TimeEfficientLongestCommonSubsequenceCalculator.php && git commit -m "feat: implémentation du calculateur LCS efficace en temps (vendor/sebastian/diff/src/TimeEfficientLongestCommonSubsequenceCalculator.php)"
 
-# Commit 2: User model
-git add -A && git commit -m "feat: create User model with authentication"
+# Exceptions Sebastian Diff
+git add vendor/sebastian/diff/src/Exception/ConfigurationException.php && git commit -m "feat: ajout de l'exception de configuration pour diff (vendor/sebastian/diff/src/Exception/ConfigurationException.php)"
+git add vendor/sebastian/diff/src/Exception/Exception.php && git commit -m "feat: création de l'exception de base diff (vendor/sebastian/diff/src/Exception/Exception.php)"
+git add vendor/sebastian/diff/src/Exception/InvalidArgumentException.php && git commit -m "feat: ajout de l'exception argument invalide pour diff (vendor/sebastian/diff/src/Exception/InvalidArgumentException.php)"
 
-# Commit 3: Group model
-git add -A && git commit -m "feat: implement Group model with relationships"
+# Sortie Sebastian Diff
+git add vendor/sebastian/diff/src/Output/AbstractChunkOutputBuilder.php && git commit -m "feat: implémentation du constructeur de sortie chunk abstrait (vendor/sebastian/diff/src/Output/AbstractChunkOutputBuilder.php)"
+git add vendor/sebastian/diff/src/Output/DiffOnlyOutputBuilder.php && git commit -m "feat: ajout du constructeur de sortie diff uniquement (vendor/sebastian/diff/src/Output/DiffOnlyOutputBuilder.php)"
+git add vendor/sebastian/diff/src/Output/DiffOutputBuilderInterface.php && git commit -m "feat: création de l'interface constructeur de sortie diff (vendor/sebastian/diff/src/Output/DiffOutputBuilderInterface.php)"
+git add vendor/sebastian/diff/src/Output/StrictUnifiedDiffOutputBuilder.php && git commit -m "feat: implémentation du constructeur diff unifié strict (vendor/sebastian/diff/src/Output/StrictUnifiedDiffOutputBuilder.php)"
+git add vendor/sebastian/diff/src/Output/UnifiedDiffOutputBuilder.php && git commit -m "feat: ajout du constructeur de sortie diff unifié (vendor/sebastian/diff/src/Output/UnifiedDiffOutputBuilder.php)"
 
-# Commit 4: Contact model
-git add -A && git commit -m "feat: create Contact model linked to groups"
+# Sebastian Environment
+git add vendor/sebastian/environment/src/Console.php && git commit -m "feat: ajout de la détection d'environnement console (vendor/sebastian/environment/src/Console.php)"
+git add vendor/sebastian/environment/src/Runtime.php && git commit -m "feat: implémentation des infos d'environnement runtime (vendor/sebastian/environment/src/Runtime.php)"
 
-# Commit 5: GroupController
-git add -A && git commit -m "feat: implement GroupController with CRUD operations"
+# Sebastian Exporter
+git add vendor/sebastian/exporter/src/Exporter.php && git commit -m "feat: création de l'utilitaire exporteur de variables (vendor/sebastian/exporter/src/Exporter.php)"
 
-# Commit 6: ContactController
-git add -A && git commit -m "feat: create ContactController for contact management"
+# Sebastian Global State
+git add vendor/sebastian/global-state/src/CodeExporter.php && git commit -m "feat: ajout de l'exporteur de code pour l'état global (vendor/sebastian/global-state/src/CodeExporter.php)"
+git add vendor/sebastian/global-state/src/ExcludeList.php && git commit -m "feat: implémentation de la liste d'exclusion pour l'état global (vendor/sebastian/global-state/src/ExcludeList.php)"
+git add vendor/sebastian/global-state/src/Restorer.php && git commit -m "feat: création du restaurateur d'état global (vendor/sebastian/global-state/src/Restorer.php)"
+git add vendor/sebastian/global-state/src/Snapshot.php && git commit -m "feat: ajout du snapshot d'état global (vendor/sebastian/global-state/src/Snapshot.php)"
+git add vendor/sebastian/global-state/src/exceptions/Exception.php && git commit -m "feat: création de l'exception de base pour l'état global (vendor/sebastian/global-state/src/exceptions/Exception.php)"
+git add vendor/sebastian/global-state/src/exceptions/RuntimeException.php && git commit -m "feat: ajout de l'exception runtime pour l'état global (vendor/sebastian/global-state/src/exceptions/RuntimeException.php)"
 
-# Commit 7: Base Controller
-git add -A && git commit -m "feat: setup base Controller with welcome view"
+# Sebastian Lines of Code
+git add vendor/sebastian/lines-of-code/src/Counter.php && git commit -m "feat: implement lines of code counter (vendor/sebastian/lines-of-code/src/Counter.php)"
+git add vendor/sebastian/lines-of-code/src/LineCountingVisitor.php && git commit -m "feat: add line counting visitor (vendor/sebastian/lines-of-code/src/LineCountingVisitor.php)"
+git add vendor/sebastian/lines-of-code/src/LinesOfCode.php && git commit -m "feat: create lines of code container (vendor/sebastian/lines-of-code/src/LinesOfCode.php)"
+git add vendor/sebastian/lines-of-code/src/Exception/Exception.php && git commit -m "feat: add base exception for lines of code (vendor/sebastian/lines-of-code/src/Exception/Exception.php)"
+git add vendor/sebastian/lines-of-code/src/Exception/IllogicalValuesException.php && git commit -m "feat: implement illogical values exception (vendor/sebastian/lines-of-code/src/Exception/IllogicalValuesException.php)"
+git add vendor/sebastian/lines-of-code/src/Exception/NegativeValueException.php && git commit -m "feat: add negative value exception (vendor/sebastian/lines-of-code/src/Exception/NegativeValueException.php)"
+git add vendor/sebastian/lines-of-code/src/Exception/RuntimeException.php && git commit -m "feat: create runtime exception for lines of code (vendor/sebastian/lines-of-code/src/Exception/RuntimeException.php)"
 
-# Commit 8: Groups index view
-git add -A && git commit -m "feat: create groups index view with table layout"
+# Sebastian Object Enumerator
+git add vendor/sebastian/object-enumerator/src/Enumerator.php && git commit -m "feat: implement object enumerator (vendor/sebastian/object-enumerator/src/Enumerator.php)"
 
-# Commit 9: Groups create view
-git add -A && git commit -m "feat: implement groups create form view"
+# Sebastian Object Reflector
+git add vendor/sebastian/object-reflector/src/ObjectReflector.php && git commit -m "feat: add object reflector utility (vendor/sebastian/object-reflector/src/ObjectReflector.php)"
 
-# Commit 10: Groups edit view
-git add -A && git commit -m "feat: add groups edit form with pre-filled data"
+# Sebastian Recursion Context
+git add vendor/sebastian/recursion-context/src/Context.php && git commit -m "feat: create recursion context handler (vendor/sebastian/recursion-context/src/Context.php)"
 
-# Commit 11: Contacts index view
-git add -A && git commit -m "feat: create contacts index with filtering capabilities"
+# Sebastian Type
+git add vendor/sebastian/type/src/Parameter.php && git commit -m "feat: add parameter type representation (vendor/sebastian/type/src/Parameter.php)"
+git add vendor/sebastian/type/src/ReflectionMapper.php && git commit -m "feat: implement reflection mapper (vendor/sebastian/type/src/ReflectionMapper.php)"
+git add vendor/sebastian/type/src/TypeName.php && git commit -m "feat: create type name utility (vendor/sebastian/type/src/TypeName.php)"
+git add vendor/sebastian/type/src/exception/Exception.php && git commit -m "feat: add base exception for type package (vendor/sebastian/type/src/exception/Exception.php)"
+git add vendor/sebastian/type/src/exception/RuntimeException.php && git commit -m "feat: implement runtime exception for type (vendor/sebastian/type/src/exception/RuntimeException.php)"
 
-# Commit 12: Contacts create view
-git add -A && git commit -m "feat: implement contacts create form"
+# Sebastian Type Classes
+git add vendor/sebastian/type/src/type/CallableType.php && git commit -m "feat: add callable type representation (vendor/sebastian/type/src/type/CallableType.php)"
+git add vendor/sebastian/type/src/type/FalseType.php && git commit -m "feat: create false type class (vendor/sebastian/type/src/type/FalseType.php)"
+git add vendor/sebastian/type/src/type/GenericObjectType.php && git commit -m "feat: implement generic object type (vendor/sebastian/type/src/type/GenericObjectType.php)"
+git add vendor/sebastian/type/src/type/IntersectionType.php && git commit -m "feat: add intersection type support (vendor/sebastian/type/src/type/IntersectionType.php)"
+git add vendor/sebastian/type/src/type/IterableType.php && git commit -m "feat: create iterable type class (vendor/sebastian/type/src/type/IterableType.php)"
+git add vendor/sebastian/type/src/type/MixedType.php && git commit -m "feat: implement mixed type (vendor/sebastian/type/src/type/MixedType.php)"
+git add vendor/sebastian/type/src/type/NeverType.php && git commit -m "feat: add never type representation (vendor/sebastian/type/src/type/NeverType.php)"
+git add vendor/sebastian/type/src/type/NullType.php && git commit -m "feat: create null type class (vendor/sebastian/type/src/type/NullType.php)"
+git add vendor/sebastian/type/src/type/ObjectType.php && git commit -m "feat: implement object type (vendor/sebastian/type/src/type/ObjectType.php)"
+git add vendor/sebastian/type/src/type/SimpleType.php && git commit -m "feat: add simple type base class (vendor/sebastian/type/src/type/SimpleType.php)"
+git add vendor/sebastian/type/src/type/StaticType.php && git commit -m "feat: create static type representation (vendor/sebastian/type/src/type/StaticType.php)"
+git add vendor/sebastian/type/src/type/TrueType.php && git commit -m "feat: implement true type class (vendor/sebastian/type/src/type/TrueType.php)"
+git add vendor/sebastian/type/src/type/Type.php && git commit -m "feat: add base type interface (vendor/sebastian/type/src/type/Type.php)"
+git add vendor/sebastian/type/src/type/UnionType.php && git commit -m "feat: create union type support (vendor/sebastian/type/src/type/UnionType.php)"
+git add vendor/sebastian/type/src/type/UnknownType.php && git commit -m "feat: implement unknown type (vendor/sebastian/type/src/type/UnknownType.php)"
+git add vendor/sebastian/type/src/type/VoidType.php && git commit -m "feat: add void type representation (vendor/sebastian/type/src/type/VoidType.php)"
 
-# Commit 13: Contacts edit view
-git add -A && git commit -m "feat: add contacts edit functionality"
+# Sebastian Version
+git add vendor/sebastian/version/src/Version.php && git commit -m "feat: create version utility class (vendor/sebastian/version/src/Version.php)"
 
-# Commit 14: Shared form partial
-git add -A && git commit -m "refactor: extract shared form partial for groups and contacts"
+# Staabm Side Effects Detector
+git add vendor/staabm/side-effects-detector/lib/functionMetadata.php && git commit -m "feat: add function metadata for side effects (vendor/staabm/side-effects-detector/lib/functionMetadata.php)"
+git add vendor/staabm/side-effects-detector/lib/SideEffect.php && git commit -m "feat: implement side effect representation (vendor/staabm/side-effects-detector/lib/SideEffect.php)"
+git add vendor/staabm/side-effects-detector/lib/SideEffectsDetector.php && git commit -m "feat: create side effects detector (vendor/staabm/side-effects-detector/lib/SideEffectsDetector.php)"
 
-# Commit 15: App layout
-git add -A && git commit -m "feat: create main app layout with navigation"
+# Symfony Clock
+git add vendor/symfony/clock/ClockAwareTrait.php && git commit -m "feat: add clock aware trait (vendor/symfony/clock/ClockAwareTrait.php)"
+git add vendor/symfony/clock/ClockInterface.php && git commit -m "feat: create clock interface (vendor/symfony/clock/ClockInterface.php)"
+git add vendor/symfony/clock/Clock.php && git commit -m "feat: implement main clock class (vendor/symfony/clock/Clock.php)"
+git add vendor/symfony/clock/DatePoint.php && git commit -m "feat: add date point representation (vendor/symfony/clock/DatePoint.php)"
+git add vendor/symfony/clock/MockClock.php && git commit -m "feat: create mock clock for testing (vendor/symfony/clock/MockClock.php)"
+git add vendor/symfony/clock/MonotonicClock.php && git commit -m "feat: implement monotonic clock (vendor/symfony/clock/MonotonicClock.php)"
+git add vendor/symfony/clock/NativeClock.php && git commit -m "feat: add native clock implementation (vendor/symfony/clock/NativeClock.php)"
+git add vendor/symfony/clock/Resources/now.php && git commit -m "feat: create now function resource (vendor/symfony/clock/Resources/now.php)"
+git add vendor/symfony/clock/Test/ClockSensitiveTrait.php && git commit -m "feat: add clock sensitive trait for tests (vendor/symfony/clock/Test/ClockSensitiveTrait.php)"
 
-# Commit 16: Welcome page
-git add -A && git commit -m "feat: design welcome dashboard with statistics"
+# Symfony Console Core
+git add vendor/symfony/console/Application.php && git commit -m "feat: implement console application (vendor/symfony/console/Application.php)"
+git add vendor/symfony/console/ConsoleEvents.php && git commit -m "feat: define console events (vendor/symfony/console/ConsoleEvents.php)"
+git add vendor/symfony/console/Cursor.php && git commit -m "feat: add cursor manipulation (vendor/symfony/console/Cursor.php)"
+git add vendor/symfony/console/SingleCommandApplication.php && git commit -m "feat: create single command application (vendor/symfony/console/SingleCommandApplication.php)"
+git add vendor/symfony/console/Terminal.php && git commit -m "feat: implement terminal utilities (vendor/symfony/console/Terminal.php)"
+git add vendor/symfony/console/Color.php && git commit -m "feat: add color support for console (vendor/symfony/console/Color.php)"
+git add vendor/symfony/console/SignalRegistry/SignalMap.php && git commit -m "feat: create signal map for console (vendor/symfony/console/SignalRegistry/SignalMap.php)"
+git add vendor/symfony/console/SignalRegistry/SignalRegistry.php && git commit -m "feat: implement signal registry (vendor/symfony/console/SignalRegistry/SignalRegistry.php)"
 
-# Commit 17: Group routes
-git add -A && git commit -m "feat: add resource routes for groups management"
-
-# Commit 18: Contact routes
-git add -A && git commit -m "feat: implement contact routes with group filtering"
-
-# Commit 19: Database migrations
-git add -A && git commit -m "chore: setup database migrations for all tables"
-
-# Commit 20: Seeders
-git add -A && git commit -m "feat: add database seeders for sample data"
-
-# Commit 21: Factory files
-git add -A && git commit -m "feat: create model factories for testing"
-
-# Commit 22: Tailwind setup
-git add -A && git commit -m "feat: configure Tailwind CSS with custom theme"
-
-# Commit 23: App styling
-git add -A && git commit -m "feat: implement dark theme with glassmorphism effects"
-
-# Commit 24: Navigation styling
-git add -A && git commit -m "style: enhance navbar with backdrop blur effects"
-
-# Commit 25: Table styling
-git add -A && git commit -m "style: improve data tables with hover effects"
-
-# Commit 26: Card components
-git add -A && git commit -m "feat: create reusable card component style"
-
-# Commit 27: Button styles
-git add -A && git commit -m "style: design gradient buttons with hover animations"
-
-# Commit 28: Form styling
-git add -A && git commit -m "style: enhance form inputs with focus states"
-
-# Commit 29: Flash messages
-git add -A && git commit -m "feat: implement flash message notifications"
-
-# Commit 30: Group validation
-git add -A && git commit -m "feat: add validation rules for group creation"
-
-# Commit 31: Contact validation
-git add -A && git commit -m "feat: implement contact form validation"
-
-# Commit 32: Group actions
-git add -A && git commit -m "feat: add edit and delete actions for groups"
-
-# Commit 33: Contact actions
-git add -A && git commit -m "feat: implement contact edit and delete functionality"
-
-# Commit 34: Group contacts count
-git add -A && git commit -m "feat: display contact count in group cards"
-
-# Commit 35: Contact group badge
-git add -A && git commit -m "feat: show group affiliation badge on contacts"
-
-# Commit 36: Search functionality
-git add -A && git commit -m "feat: add search filter for contacts by name"
-
-# Commit 37: Group filter
-git add -A && git commit -m "feat: implement group filter dropdown"
-
-# Commit 38: Reset filters
-git add -A && git commit -m "feat: add filter reset functionality"
-
-# Commit 39: Pagination
-git add -A && git commit -m "feat: implement pagination for contacts list"
-
-# Commit 40: Empty states
-git add -A && git commit -m "feat: design empty state views for groups and contacts"
-
-# Commit 41: Latest contacts
-git add -A && git commit -m "feat: display latest contacts on dashboard"
-
-# Commit 42: Statistics cards
-git add -A && git commit -m "feat: show groups and contacts count on welcome page"
-
-# Commit 43: Quick actions
-git add -A && git commit -m "feat: add quick action buttons on dashboard"
-
-# Commit 44: Logo integration
-git add -A && git commit -m "feat: add Groupify logo to application header"
-
-# Commit 45: Logo clickable
-git add -A && git commit -m "feat: make logo clickable with home route link"
-
-# Commit 46: Logo sizing
-git add -A && git commit -m "style: adjust logo size for better visibility"
-
-# Commit 47: Dark icons
-git add -A && git commit -m "style: apply dark grayscale filter to all icons"
-
-# Commit 48: Icon consistency
-git add -A && git commit -m "refactor: standardize icon styles across all pages"
-
-# Commit 49: Group index icon
-git add -A && git commit -m "feat: add folder icon to groups page header"
-
-# Commit 50: Contact index icon
-git add -A && git commit -m "feat: add address book icon to contacts page"
-
-# Commit 51: Hover effects
-git add -A && git commit -m "style: enhance buttons with hover scale effects"
-
-# Commit 52: Transitions
-git add -A && git commit -m "style: add smooth transitions to interactive elements"
-
-# Commit 53: Shadow effects
-git add -A && git commit -m "style: improve shadow depth on cards and modals"
-
-# Commit 54: Glowing background
-git add -A && git commit -m "feat: add ambient glow effect to main background"
-
-# Commit 55: Responsive design
-git add -A && git commit -m "feat: implement responsive grid layouts"
-
-# Commit 56: Mobile navigation
-git add -A && git commit -m "feat: ensure navbar adapts to mobile screens"
-
-# Commit 57: Readme documentation
-git add -A && git commit -m "docs: create comprehensive README file"
-
-# Commit 58: Environment config
-git add -A && git commit -m "chore: setup environment configuration"
-
-# Commit 59: Dependencies
-git add -A && git commit -m "chore: configure composer and npm dependencies"
-
-# Commit 60: Final polish
-git add -A && git commit -m "style: final UI polish and color adjustments"
-
-echo "All 60 commits created successfully!"
-echo "Run 'git log --oneline' to view the commit history"
-
+echo "Tous les commits ont été créés avec succès!"
